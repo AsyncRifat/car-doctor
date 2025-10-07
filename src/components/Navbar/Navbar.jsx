@@ -29,7 +29,7 @@ export default function Navbar() {
         <Search />
         <Button
           variant={'navButton'}
-          className="hidden lg:block px-8 pb-8 pt-3"
+          className="hidden lg:block px-8 pb-8 pt-3 cursor-pointer"
         >
           Appointment
         </Button>

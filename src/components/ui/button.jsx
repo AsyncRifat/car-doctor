@@ -21,7 +21,7 @@ const buttonVariants = cva(
         theme:
           'p-0.5 bg-gray-300 dark:bg-gray-700 text-orange-700 dark:text-gray-200 rounded-full',
         navButton:
-          'border border-red-500 rounded-md text-center backdrop-blur-xs bg-teal/50 text-red-500',
+          'border border-orange-500 rounded-md text-center backdrop-blur-xs bg-teal/50 text-orange-500 hover:bg-gray-100',
       },
       size: {
         default: 'h-9 px-4 py-2 has-[>svg]:px-3',
