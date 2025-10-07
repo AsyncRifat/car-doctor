@@ -1,5 +1,6 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@plugin "daisyui";
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -45,7 +46,7 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  --background: #e8f0f8;
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -79,7 +80,7 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: #131518;
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
@@ -119,4 +120,21 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* animation for navbar drawer*/
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* location: components/navbar/navbarDrawer */
+.animate-slide-in {
+  animation: slide-in 0.5s ease-in-out forwards;
 }
