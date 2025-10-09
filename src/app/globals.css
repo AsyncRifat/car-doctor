@@ -122,6 +122,14 @@
   }
 }
 
+.bg-light {
+  background-color: #e8f0f8;
+  transition: background-color 0.3s ease;
+}
+.bg-light:hover {
+  background-color: rgb(249 115 22);
+}
+
 /* animation for navbar drawer*/
 @keyframes slide-in {
   from {
@@ -137,4 +145,23 @@
 /* location: components/navbar/navbarDrawer */
 .animate-slide-in {
   animation: slide-in 0.5s ease-in-out forwards;
+}
+
+.overlay-bg {
+  background: #030405;
+  background: linear-gradient(
+    270deg,
+    rgba(3, 4, 5, 0) 30%,
+    rgba(3, 4, 5, 0.53) 65%,
+    rgba(6, 5, 7, 0.53) 80%,
+    rgba(10, 7, 10, 0) 92%
+  );
+}
+
+/* point 1: x1, y1 */
+/* point 2: x2, y2 */
+/* point 3: x3, y3 */
+/* point 4: x4, y4 */
+.clip-trapezoid {
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
 }

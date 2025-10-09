@@ -24,7 +24,7 @@ export default function Navbar() {
       </div>
 
       {/* Right Section */}
-      <div className="navbar-end space-x-3 md:space-x-5 lg:space-x-7 ">
+      <div className="navbar-end gap-3 md:gap-5 lg:gap-7 ">
         <Handbag />
         <Search />
         <Button

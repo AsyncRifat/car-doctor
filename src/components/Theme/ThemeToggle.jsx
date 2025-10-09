@@ -10,7 +10,7 @@ export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
 
   // check resolvedTheme
-  console.log(resolvedTheme);
+  // console.log(resolvedTheme);
 
   // mounted flag to fix hydration issues
   useEffect(() => setMounted(true), []);

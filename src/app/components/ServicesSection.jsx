@@ -4,9 +4,11 @@
 import dbConnect, { collectionNames } from '@/lib/dbConnect';
 import { SquareArrowOutUpRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 export default async function ServicesSection() {
+  // fetch data in public/json
   // const res = await fetch(
   //   `${process.env.NEXT_PUBLIC_SITE_URL}/json/services.json`,
   //   {
@@ -16,7 +18,8 @@ export default async function ServicesSection() {
   // const data = await res.json();
 
   // fetch data in DB
-  const data = await dbConnect(collectionNames.SERVICES).find().toArray();
+  const serviceCollection = dbConnect(collectionNames.SERVICES);
+  const data = await serviceCollection.find().toArray();
 
   return (
     <section>
@@ -61,7 +64,14 @@ export default async function ServicesSection() {
                 >
                   Price: $<span itemProp="price">{service.price}</span>
                 </p>
-                <SquareArrowOutUpRight className="text-orange-500" size={17} />
+
+                {/* Dynamic route */}
+                <Link href={`/service/${service._id}`}>
+                  <SquareArrowOutUpRight
+                    className="text-orange-500"
+                    size={17}
+                  />
+                </Link>
               </div>
             </div>
           </article>
