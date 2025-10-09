@@ -105,6 +105,17 @@ export default async function ServiceDetailsPage({ params }) {
                 </span>
               </p>
             </Link>
+            <Link href={'/'}>
+              <p className="group flex justify-between items-center p-3 bg-light rounded-lg font-semibold">
+                <span className="group-hover:text-gray-50 transition-colors duration-300">
+                  {' '}
+                  Full Car Repair
+                </span>{' '}
+                <span>
+                  <ArrowRight className="text-orange-500 group-hover:text-gray-50 transition-colors duration-300" />
+                </span>
+              </p>
+            </Link>
           </div>
         </div>
       </section>
