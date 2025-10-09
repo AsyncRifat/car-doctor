@@ -8,7 +8,7 @@ import { Search } from 'lucide-react';
 
 export default function Navbar() {
   return (
-    <nav className="navbar bg-white/30 backdrop-blur-md shadow-xs z-50">
+    <nav className="navbar max-w-7xl mx-auto backdrop-blur-md z-50">
       {/* Left Section */}
       <div className="navbar-start">
         <Link href="/">

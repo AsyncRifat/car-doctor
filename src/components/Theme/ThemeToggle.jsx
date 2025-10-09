@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { Sun, Moon, Laptop } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-export default function ThemeToggleGroup() {
+export default function ThemeToggle() {
   const { theme, setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 

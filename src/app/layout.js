@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar/Navbar';
 import NextThemeProvider from '@/components/Providers/NextThemeProvider';
+import Footer from '@/components/Footer';
 
 // font family
 const inter = Inter({
@@ -32,6 +33,9 @@ export default function RootLayout({ children }) {
 
           {/* main section */}
           <main>{children}</main>
+          <footer>
+            <Footer />
+          </footer>
         </NextThemeProvider>
       </body>
     </html>
