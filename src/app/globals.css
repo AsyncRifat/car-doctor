@@ -124,8 +124,12 @@
 
 .bg-light {
   background-color: #e8f0f8;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.8s ease;
 }
+.dark .bg-light {
+  background-color: #17202d; /* dark mode color */
+}
+
 .bg-light:hover {
   background-color: rgb(249 115 22);
 }

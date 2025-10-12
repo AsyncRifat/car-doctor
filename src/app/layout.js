@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} antialiased `}>
         <NextThemeProvider>
           {/* navbar made by DaisyUi */}
-          <nav className="sticky top-0 w-full">
+          <nav className="sticky top-0 w-full z-[9999]">
             <Navbar />
           </nav>
 
