@@ -23,7 +23,7 @@ export default function AboutUs() {
         </div>
 
         {/* image2 */}
-        <div className="absolute -bottom-1 right-0 h-[302px] w-[327px] border-8 border-[#e8f0f8] rounded-lg overflow-hidden">
+        <div className="absolute -bottom-1 right-0 h-[302px] w-[327px] border-8 border-[#e8f0f8] dark:border-[#131518] rounded-lg overflow-hidden">
           <Image
             src={AboutUs2}
             alt="parts picture"
@@ -42,13 +42,13 @@ export default function AboutUs() {
           We are qualified <br /> & of experience <br /> in this field
         </h2>
         <div className="space-y-2.5 text-justify">
-          <p className="text-gray-600">
+          <p className="text-gray-700 dark:text-gray-300">
             With years of hands-on experience and a passion for innovation, we
             provide top-notch automotive services that ensure your vehicle runs
             smoothly and safely. From expert diagnostics to precision repairs,
             our dedicated team delivers excellence you can trust.
           </p>
-          <p className="text-gray-600">
+          <p className="text-gray-700 dark:text-gray-300">
             Our workshop is equipped with advanced diagnostic tools and genuine
             spare parts, handled by a team of certified technicians who treat
             every vehicle with care and dedication. Whether it's routine
@@ -56,7 +56,7 @@ export default function AboutUs() {
             every detail is handled with perfection.
           </p>
 
-          <p className="text-gray-600">
+          <p className="text-gray-700 dark:text-gray-300">
             We believe trust is built through quality and transparency. That’s
             why we maintain open communication, provide clear pricing, and
             ensure that every customer drives away with confidence. From small

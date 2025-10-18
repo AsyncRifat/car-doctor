@@ -1,6 +1,7 @@
 import AboutUs from './components/AboutUs';
 import { CarouselPlugin } from './components/CarouselPlugin';
 import ServicesSection from './components/ServicesSection';
+import Support from './components/Support';
 
 export default function Home() {
   return (
@@ -15,6 +16,10 @@ export default function Home() {
 
       <section>
         <ServicesSection />
+      </section>
+
+      <section>
+        <Support />
       </section>
     </main>
   );
