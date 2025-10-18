@@ -23,8 +23,8 @@ export default async function ServicesSection() {
 
   return (
     <section>
-      <header className="text-center space-y-3 my-10">
-        <h4 className="text-orange-500">Service</h4>
+      <header className="text-center space-y-3 my-10 px-2">
+        <h4 className="text-orange-500 font-bold">Service</h4>
         <h2 className="font-bold text-3xl">Our Service Area</h2>
         <p className="max-w-xl text-sm mx-auto">
           the majority have suffered alteration in some form, by injected
@@ -32,7 +32,7 @@ export default async function ServicesSection() {
         </p>
       </header>
 
-      <div className="max-w-7xl grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mx-auto justify-items-center gap-15 pb-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  justify-items-center gap-15 pb-10">
         {data.map(service => (
           <article
             key={service?._id}

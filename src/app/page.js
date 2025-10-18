@@ -1,9 +1,16 @@
+import { CarouselPlugin } from './components/CarouselPlugin';
 import ServicesSection from './components/ServicesSection';
 
 export default function Home() {
   return (
-    <div>
-      <ServicesSection />
-    </div>
+    <main className="max-w-7xl mx-auto">
+      <section>
+        <CarouselPlugin />
+      </section>
+
+      <section>
+        <ServicesSection />
+      </section>
+    </main>
   );
 }

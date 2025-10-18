@@ -45,7 +45,7 @@ export default async function ServiceDetailsPage({ params }) {
       </section>
 
       {/* dynamic section */}
-      <section className="max-w-7xl mx-auto grid grid-cols-5 gap-15 mt-16">
+      <section className="max-w-7xl mx-auto grid grid-cols-5 gap-15 my-16">
         <article className="col-span-3">
           {/* Service Image */}
           <figure>
@@ -104,7 +104,7 @@ export default async function ServiceDetailsPage({ params }) {
             {/* Service Type */}
             <div className="flex flex-col gap-y-5">
               <Link href={'/'}>
-                <p className="group flex justify-between items-center p-5 bg-light rounded-lg font-semibold">
+                <p className="group flex justify-between items-center p-4 bg-light rounded-lg font-semibold">
                   <span className="text-lg font-semibold group-hover:text-gray-50 transition-colors duration-300">
                     {' '}
                     Full Car Repair
@@ -116,7 +116,7 @@ export default async function ServiceDetailsPage({ params }) {
               </Link>
 
               <Link href={'/'}>
-                <p className="group flex justify-between items-center p-5 bg-light rounded-lg font-semibold">
+                <p className="group flex justify-between items-center p-4 bg-light rounded-lg font-semibold">
                   <span className="text-lg font-semibold group-hover:text-gray-50 transition-colors duration-300">
                     {' '}
                     Engine Repair
@@ -128,7 +128,7 @@ export default async function ServiceDetailsPage({ params }) {
               </Link>
 
               <Link href={'/'}>
-                <p className="group flex justify-between items-center p-5 bg-light rounded-lg font-semibold">
+                <p className="group flex justify-between items-center p-4 bg-light rounded-lg font-semibold">
                   <span className="text-lg font-semibold group-hover:text-gray-50 transition-colors duration-300">
                     {' '}
                     Automatic Services
@@ -140,7 +140,7 @@ export default async function ServiceDetailsPage({ params }) {
               </Link>
 
               <Link href={'/'}>
-                <p className="group flex justify-between items-center p-5 bg-light rounded-lg font-semibold">
+                <p className="group flex justify-between items-center p-4 bg-light rounded-lg font-semibold">
                   <span className="text-lg font-semibold group-hover:text-gray-50 transition-colors duration-300">
                     {' '}
                     Engine Oil Change
@@ -152,7 +152,7 @@ export default async function ServiceDetailsPage({ params }) {
               </Link>
 
               <Link href={'/'}>
-                <p className="group flex justify-between items-center p-5 bg-light rounded-lg font-semibold">
+                <p className="group flex justify-between items-center p-4 bg-light rounded-lg font-semibold">
                   <span className="text-lg font-semibold group-hover:text-gray-50 transition-colors duration-300">
                     {' '}
                     Battery Charge
@@ -191,7 +191,7 @@ export default async function ServiceDetailsPage({ params }) {
                 </p>
               </div>
 
-              <Button className="absolute -bottom-4.5 left-1/2 -translate-x-1/2 py-6 bg-orange-500 text-lg font-semibold">
+              <Button className="absolute -bottom-4.5 left-1/2 -translate-x-1/2 py-6 bg-orange-500 hover:border-b text-lg font-semibold transition-all duration-700">
                 Get A Quote
               </Button>
             </div>
@@ -202,7 +202,7 @@ export default async function ServiceDetailsPage({ params }) {
             <h2 className="text-3xl font-bold">
               Price ${data?.price || 'Price'}
             </h2>
-            <Button className="bg-orange-500 cursor-pointer rounded-lg p-7 text-xl font-bold text-center w-full">
+            <Button className="bg-orange-500 cursor-pointer rounded-lg p-7 text-xl font-bold text-center w-full transition-all duration-700">
               Proceed Checkout
             </Button>
           </div>
