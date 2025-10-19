@@ -1,5 +1,6 @@
 'use server';
 
+import { Button } from '@/components/ui/button';
 // SEO friendly page
 import dbConnect, { collectionNames } from '@/lib/dbConnect';
 import { SquareArrowOutUpRight } from 'lucide-react';
@@ -77,6 +78,14 @@ export default async function ServicesSection() {
           </article>
         ))}
       </div>
+
+      {/* button */}
+      <Button
+        className="flex items-center text-lg text-orange-500 hover:text-white mx-auto px-8 py-6 text-center transition-all duration-700"
+        variant={'banner_btn2'}
+      >
+        More Services
+      </Button>
     </section>
   );
 }
