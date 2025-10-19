@@ -1,5 +1,6 @@
 import AboutUs from './components/AboutUs';
 import { CarouselPlugin } from './components/CarouselPlugin';
+import Products from './components/Products';
 import ServicesSection from './components/ServicesSection';
 import Support from './components/Support';
 
@@ -20,6 +21,10 @@ export default function Home() {
 
       <section>
         <Support />
+      </section>
+
+      <section>
+        <Products />
       </section>
     </main>
   );

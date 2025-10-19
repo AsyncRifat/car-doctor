@@ -17,7 +17,8 @@ const buttonVariants = cva(
         secondary:
           'bg-secondary text-secondary-foreground hover:bg-secondary/80',
         ghost:
-          'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50',
+          'hover:bg-accent hover:text-accent-foreground hover:rounded-full dark:hover:bg-accent/50',
+        theme: 'border border-gray-600 rounded-full ',
         link: 'text-primary underline-offset-4 hover:underline',
         navButton: 'border border-orange-500 text-orange-500',
         banner:
