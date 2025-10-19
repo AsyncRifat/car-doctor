@@ -84,7 +84,7 @@ export default async function ServicesSection() {
         className="flex items-center text-lg text-orange-500 hover:text-white mx-auto px-8 py-6 text-center transition-all duration-700"
         variant={'banner_btn2'}
       >
-        More Services
+        <Link href="/service">More Services</Link>
       </Button>
     </section>
   );

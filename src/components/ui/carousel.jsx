@@ -176,6 +176,35 @@ function CarouselPrevious({
     </Button>
   );
 }
+function ReviewPrevious({
+  className,
+  variant = 'outline',
+  size = 'icon',
+  ...props
+}) {
+  const { orientation, scrollPrev, canScrollPrev } = useCarousel();
+
+  return (
+    <Button
+      data-slot="carousel-previous"
+      variant={'banner'}
+      size={size}
+      className={cn(
+        'absolute size-9 rounded-full',
+        orientation === 'horizontal'
+          ? 'bottom-1/2 -left-11'
+          : 'bottom-1/2 -left-11 rotate-90',
+        className
+      )}
+      disabled={!canScrollPrev}
+      onClick={scrollPrev}
+      {...props}
+    >
+      <ArrowLeft size={32} />
+      <span className="sr-only">Previous slide</span>
+    </Button>
+  );
+}
 
 function CarouselNext({
   className,
@@ -206,11 +235,42 @@ function CarouselNext({
     </Button>
   );
 }
+function ReviewNext({
+  className,
+  variant = 'outline',
+  size = 'icon',
+  ...props
+}) {
+  const { orientation, scrollNext, canScrollNext } = useCarousel();
+
+  return (
+    <Button
+      data-slot="carousel-next"
+      variant={'banner'}
+      size={size}
+      className={cn(
+        'absolute size-9 rounded-full',
+        orientation === 'horizontal'
+          ? 'bottom-1/2 -right-7'
+          : 'bottom-1/2 -right-7 rotate-90',
+        className
+      )}
+      disabled={!canScrollNext}
+      onClick={scrollNext}
+      {...props}
+    >
+      <ArrowRight />
+      <span className="sr-only">Next slide</span>
+    </Button>
+  );
+}
 
 export {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselPrevious,
+  ReviewPrevious,
   CarouselNext,
+  ReviewNext,
 };

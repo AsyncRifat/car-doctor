@@ -3,6 +3,7 @@ import { CarouselPlugin } from './components/CarouselPlugin';
 import Features from './components/Features';
 import OurTeam from './components/OurTeam';
 import Products from './components/Products';
+import CustomerReviews from './components/CustomerReviews';
 import ServicesSection from './components/ServicesSection';
 import Support from './components/Support';
 
@@ -35,6 +36,10 @@ export default function Home() {
 
       <section>
         <Features />
+      </section>
+
+      <section>
+        <CustomerReviews />
       </section>
     </main>
   );

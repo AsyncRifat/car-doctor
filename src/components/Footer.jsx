@@ -111,8 +111,13 @@ export default function Footer() {
       {/* Bottom Credit */}
       <div className="text-center text-sm text-gray-500 mt-10 border-t border-gray-700 pt-5">
         <p>
-          © {new Date().getFullYear()} <span itemProp="name">Edwin Diag</span>.
-          All rights reserved.
+          © {new Date().getFullYear()}{' '}
+          <span itemProp="name" className="hover:underline font-semibold">
+            <Link href={'https://ibrahimrifatpro.web.app/'} target="_blank">
+              Ibrahim Rifat
+            </Link>
+          </span>{' '}
+          . All rights reserved.
         </p>
       </div>
     </footer>

@@ -19,7 +19,7 @@ export default function Features() {
         </p>
       </header>
 
-      <div className="grid grid-cols-6 gap-14">
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-7 md:gap-10 lg:gap-14">
         <div className="group justify-items-center border border-orange-600/10 p-5 hover:bg-orange-500 rounded-lg transition-all duration-700">
           <Users
             size={34}
