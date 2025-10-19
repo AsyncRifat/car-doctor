@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { Facebook } from 'lucide-react';
 import { Twitter } from 'lucide-react';
 import { Linkedin } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 
 const teamImages = [
   { id: 1, src: t1, alt: 'Engine Engineer', name: 'Ian C. Jones' },
@@ -60,9 +61,9 @@ export default function OurTeam() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit our Facebook page"
-                  className="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all duration-200"
+                  className="p-1.5 rounded-full bg-blue-800 text-white hover:bg-blue-900 transition-all duration-200"
                 >
-                  <Facebook size={20} />
+                  <Facebook size={27} />
                 </Link>
 
                 <Link
@@ -70,9 +71,9 @@ export default function OurTeam() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit our Twitter page"
-                  className="p-2 rounded-full bg-sky-500 text-white hover:bg-sky-600 transition-all duration-200"
+                  className="p-2 rounded-full bg-sky-600 text-white hover:bg-sky-700 transition-all duration-200"
                 >
-                  <Twitter size={20} />
+                  <Twitter size={24} />
                 </Link>
 
                 <Link
@@ -80,9 +81,19 @@ export default function OurTeam() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit our LinkedIn profile"
-                  className="p-2 rounded-full bg-blue-700 text-white hover:bg-blue-800 transition-all duration-200"
+                  className="p-2 rounded-full bg-blue-800 text-white hover:bg-blue-900 transition-all duration-200"
                 >
-                  <Linkedin size={20} />
+                  <Linkedin size={24} />
+                </Link>
+
+                <Link
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit our LinkedIn profile"
+                  className="p-2 rounded-full bg-gradient-to-b from-pink-800 via-pink-500 to-yellow-500  text-white hover:bg-blue-900 transition-all duration-200"
+                >
+                  <Instagram size={24} />
                 </Link>
               </div>
             </div>

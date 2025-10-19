@@ -1,5 +1,6 @@
 import AboutUs from './components/AboutUs';
 import { CarouselPlugin } from './components/CarouselPlugin';
+import Features from './components/Features';
 import OurTeam from './components/OurTeam';
 import Products from './components/Products';
 import ServicesSection from './components/ServicesSection';
@@ -30,6 +31,10 @@ export default function Home() {
 
       <section>
         <OurTeam />
+      </section>
+
+      <section>
+        <Features />
       </section>
     </main>
   );
