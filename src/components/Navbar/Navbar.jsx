@@ -27,6 +27,13 @@ export default function Navbar() {
       <div className="navbar-end gap-3 md:gap-5 lg:gap-7 ">
         <Handbag />
         <Search />
+        {/* register button */}
+        <Button
+          variant={'navButton'}
+          className="hidden lg:block px-5 pb-8 pt-3 cursor-pointer"
+        >
+          <Link href="/register">Sign Up</Link>
+        </Button>
         <Button
           variant={'navButton'}
           className="hidden lg:block px-8 pb-8 pt-3 cursor-pointer"

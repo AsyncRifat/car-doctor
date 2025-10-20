@@ -34,6 +34,7 @@ export default function RootLayout({ children }) {
           {/* main section */}
           <main>{children}</main>
 
+          {/* footer */}
           <footer>
             <Footer />
           </footer>

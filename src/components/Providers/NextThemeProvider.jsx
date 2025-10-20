@@ -1,5 +1,6 @@
 'use client';
 import { ThemeProvider } from 'next-themes';
+import { Toaster } from '../ui/sonner';
 
 export default function NextThemeProvider({ children }) {
   return (
@@ -9,6 +10,7 @@ export default function NextThemeProvider({ children }) {
       enableSystem
     >
       {children}
+      <Toaster position="top-center" />
     </ThemeProvider>
   );
 }
