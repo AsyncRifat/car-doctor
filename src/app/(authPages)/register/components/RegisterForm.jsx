@@ -21,10 +21,10 @@ export default function RegisterForm() {
     if (res?.success) {
       console.log(res.userId);
       toast.success(res.message || 'Congratulation! Successful registered');
+      reset();
     } else {
       toast.error(res.error || 'Something went wrong!');
     }
-    reset();
   };
   return (
     <section className="p-16 space-y-10 border border-orange-600/10 rounded-lg">

@@ -1,23 +1,49 @@
 'use client';
 
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { signIn } from 'next-auth/react';
 import { toast } from 'sonner';
+import { useRouter } from 'next/navigation';
+import { Loader } from 'lucide-react';
 
 export default function LoginForm() {
+  const [loading, setLoading] = useState(false);
+  const navigate = useRouter();
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
   const onSubmit = async data => {
     const { email, password } = data;
+    setLoading(true);
 
     // signIn method call
-    const res = await signIn('credentials', { email, password });
+    try {
+      const response = await signIn('credentials', {
+        email,
+        password,
+        callbackUrl: '/',
+        redirect: false,
+      });
+
+      // redirect and condition check
+      if (response?.ok) {
+        toast.success('Login successful!');
+        navigate.push('/');
+        reset();
+      } else {
+        setLoading(false);
+        toast.error(response?.error || 'Something went wrong!');
+      }
+    } catch (error) {
+      setLoading(false);
+      toast.error(error.message || 'Something went wrong!');
+    }
   };
 
   return (
@@ -83,8 +109,13 @@ export default function LoginForm() {
         <button
           type="submit"
           className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-md transition mt-2"
+          disabled={loading}
         >
-          Login
+          {loading ? (
+            <Loader className="animate-spin mx-auto text-gray-300" />
+          ) : (
+            'Login'
+          )}
         </button>
       </form>
 

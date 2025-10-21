@@ -26,6 +26,8 @@ export const registerUser = async payload => {
       payload.password = hashPassword;
       payload.createAt = new Date();
       const result = await userCollection.insertOne(payload);
+
+      // "insertedId" must be convert to string
       return {
         success: true,
         userId: result.insertedId.toString(),
