@@ -1,5 +1,6 @@
 'use client';
 
+import { registerUser } from '@/app/actions/auth/registerUser';
 import Link from 'next/link';
 import React from 'react';
 import { useForm } from 'react-hook-form';
@@ -10,11 +11,20 @@ export default function RegisterForm() {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
-  const onSubmit = data => {
-    console.log(' Form Data:', data);
-    toast.success(`Welcome, ${data.name}! Registration Successful 🎉`);
+  const onSubmit = async data => {
+    // fields data
+    const res = await registerUser(data);
+    // return message
+    if (res?.success) {
+      console.log(res.userId);
+      toast.success(res.message || 'Congratulation! Successful registered');
+    } else {
+      toast.error(res.error || 'Something went wrong!');
+    }
+    reset();
   };
   return (
     <section className="p-16 space-y-10 border border-orange-600/10 rounded-lg">

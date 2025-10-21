@@ -3,16 +3,30 @@
 import Link from 'next/link';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { signIn } from 'next-auth/react';
+import { toast } from 'sonner';
 
 export default function LoginForm() {
   const {
     register,
+    handleSubmit,
     formState: { errors },
   } = useForm();
+
+  const onSubmit = async data => {
+    const { email, password } = data;
+
+    // signIn method call
+    const res = await signIn('credentials', { email, password });
+  };
+
   return (
     <section className="p-16 space-y-10 border border-orange-600/10 rounded-lg">
       <h1 className="text-3xl font-bold text-center">Sign In</h1>
-      <form className="w-full mx-auto rounded-xl space-y-5">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="w-full mx-auto rounded-xl space-y-5"
+      >
         <fieldset className="flex flex-col justify-center space-y-3">
           {/* email field */}
           <div className="flex flex-col">
