@@ -3,6 +3,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar/Navbar';
 import NextThemeProvider from '@/components/Providers/NextThemeProvider';
 import Footer from '@/components/Footer';
+import NextAuthSessionProvider from '@/providers/NextAuthSessionProvider';
 
 // font family
 const inter = Inter({
@@ -25,20 +26,22 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} antialiased `}>
-        <NextThemeProvider>
-          {/* navbar made by DaisyUi */}
-          <nav className="sticky top-0 w-full z-[9999]">
-            <Navbar />
-          </nav>
+        <NextAuthSessionProvider>
+          <NextThemeProvider>
+            {/* navbar made by DaisyUi */}
+            <nav className="sticky top-0 w-full z-[9999]">
+              <Navbar />
+            </nav>
 
-          {/* main section */}
-          <main>{children}</main>
+            {/* main section */}
+            <main>{children}</main>
 
-          {/* footer */}
-          <footer>
-            <Footer />
-          </footer>
-        </NextThemeProvider>
+            {/* footer */}
+            <footer>
+              <Footer />
+            </footer>
+          </NextThemeProvider>
+        </NextAuthSessionProvider>
       </body>
     </html>
   );

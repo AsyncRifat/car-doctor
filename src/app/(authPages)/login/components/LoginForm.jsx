@@ -7,6 +7,7 @@ import { signIn } from 'next-auth/react';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 import { Loader } from 'lucide-react';
+import SocialLogIn from '../../components/SocialLogIn';
 
 export default function LoginForm() {
   const [loading, setLoading] = useState(false);
@@ -119,9 +120,11 @@ export default function LoginForm() {
         </button>
       </form>
 
-      <h3 className="text-center text-sm">Or Sign In with</h3>
-
-      {/* TODO: Social login */}
+      <div className="space-y-3">
+        <h3 className="text-center text-sm">Or Sign In with</h3>
+        {/* Done: Social login */}
+        <SocialLogIn />
+      </div>
 
       <h3 className="text-center text-xs">
         Have an account?{' '}

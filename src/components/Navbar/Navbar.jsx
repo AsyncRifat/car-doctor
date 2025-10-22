@@ -2,9 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { NavLinks } from './NavLinks';
 import MobileDrawer from './MobileDrawer';
-import { Button } from '../ui/button';
-import { Handbag } from 'lucide-react';
-import { Search } from 'lucide-react';
+import AuthButton from './AuthButton';
 
 export default function Navbar() {
   return (
@@ -25,21 +23,7 @@ export default function Navbar() {
 
       {/* Right Section */}
       <div className="navbar-end gap-3 md:gap-5 lg:gap-7 ">
-        <Handbag />
-        <Search />
-        {/* register button */}
-        <Button
-          variant={'navButton'}
-          className="hidden lg:block px-5 pb-8 pt-3 cursor-pointer"
-        >
-          <Link href="/register">Sign Up</Link>
-        </Button>
-        <Button
-          variant={'navButton'}
-          className="hidden lg:block px-8 pb-8 pt-3 cursor-pointer"
-        >
-          Appointment
-        </Button>
+        <AuthButton />
         <MobileDrawer /> {/* Only this hydrates */}
       </div>
     </nav>

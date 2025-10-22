@@ -5,6 +5,7 @@ import Link from 'next/link';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';
+import SocialLogIn from '../../components/SocialLogIn';
 
 export default function RegisterForm() {
   const {
@@ -115,9 +116,11 @@ export default function RegisterForm() {
         </button>
       </form>
 
-      <h3 className="text-center text-sm">Or Sign Up with</h3>
-
-      {/* TODO: Social login */}
+      <div className="space-y-3">
+        <h3 className="text-center text-sm">Or Sign Up with</h3>
+        {/* Done: Social login */}
+        <SocialLogIn />
+      </div>
 
       <h3 className="text-center text-xs">
         Already have an account?{' '}
