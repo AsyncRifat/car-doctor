@@ -85,5 +85,13 @@ export const authOptions = {
 
       return true;
     },
+
+    // TODO:
+    async session({ session, token, user }) {
+      return session;
+    },
+    async jwt({ token, user, account, profile, isNewUser }) {
+      return token;
+    },
   },
 };

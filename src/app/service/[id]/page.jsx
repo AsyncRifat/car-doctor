@@ -11,9 +11,14 @@ export default async function ServiceDetailsPage({ params }) {
   const p = await params;
   // console.log(p);
 
-  //match in DB
-  const serviceCollection = dbConnect(collectionNames.SERVICES);
-  const data = await serviceCollection.findOne({ _id: new ObjectId(p.id) });
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_SITE_URL}/api/service/${p.id}`
+  );
+  if (!res.ok) {
+    throw new Error('Failed to fetch service details');
+  }
+  const data = await res.json();
+
   return (
     <>
       {/* banner section */}
@@ -202,9 +207,11 @@ export default async function ServiceDetailsPage({ params }) {
             <h2 className="text-3xl font-bold">
               Price ${data?.price || 'Price'}
             </h2>
-            <Button className="bg-orange-500 cursor-pointer rounded-lg p-7 text-xl font-bold text-center w-full transition-all duration-700">
-              Proceed Checkout
-            </Button>
+            <Link href={`/checkout/${data._id}`}>
+              <Button className="bg-orange-500 cursor-pointer rounded-lg p-7 text-xl font-bold text-center w-full transition-all duration-700">
+                Proceed Checkout
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
