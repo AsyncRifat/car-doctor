@@ -4,6 +4,7 @@ export const collectionNames = {
   USERS: 'current_user',
   SERVICES: 'services',
   PRODUCTS: 'products',
+  BOOKING_COLLECTION: 'booking_service',
 };
 
 export default function dbConnect(collectionName) {

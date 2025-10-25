@@ -1,4 +1,5 @@
 import React from 'react';
+import CheckoutForm from '../components/CheckoutForm';
 
 export default async function CheckoutPage({ params }) {
   const p = await params;
@@ -11,5 +12,9 @@ export default async function CheckoutPage({ params }) {
     throw new Error('Failed to fetch service details');
   }
   const data = await res.json();
-  return <div>{JSON.stringify(data)}</div>;
+  return (
+    <>
+      <CheckoutForm data={data} />
+    </>
+  );
 }

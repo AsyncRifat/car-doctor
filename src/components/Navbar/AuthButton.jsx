@@ -10,8 +10,8 @@ import { signOut, useSession } from 'next-auth/react';
 export default function AuthButton() {
   const { data: session, status } = useSession();
 
-  console.log('SESSION:', session);
-  console.log('STATUS:', status);
+  // console.log('SESSION:', session);
+  // console.log('STATUS:', status);
 
   return (
     <>
