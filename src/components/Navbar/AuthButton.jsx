@@ -15,8 +15,16 @@ export default function AuthButton() {
 
   return (
     <>
-      <Handbag />
-      <Search />
+      {/* my booking button */}
+      <Link href="/my-booking" title="My Booking">
+        <Handbag />
+      </Link>
+
+      {/* search button */}
+      <Link href={'/'} title="search">
+        <Search />
+      </Link>
+
       {/* register button */}
       {status === 'authenticated' ? (
         <Button

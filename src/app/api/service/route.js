@@ -1,5 +1,24 @@
+import { authOptions } from '@/lib/authOptions';
 import dbConnect, { collectionNames } from '@/lib/dbConnect';
+import { getServerSession } from 'next-auth';
 import { NextResponse } from 'next/server';
+
+export const GET = async req => {
+  const session = await getServerSession(authOptions);
+
+  if (!session) {
+    return NextResponse.json({ message: 'Unauthorized' }, { status: 401 });
+  }
+
+  if (session) {
+    // console.log(session);
+    const email = session?.user?.email;
+    const getBooking = dbConnect(collectionNames.BOOKING_COLLECTION);
+    const result = await getBooking.find({ email }).toArray();
+    console.log(result);
+    return NextResponse.json(result);
+  }
+};
 
 export const POST = async req => {
   try {
